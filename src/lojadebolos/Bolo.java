@@ -9,6 +9,102 @@ package lojadebolos;
  *
  * @author marcosantonio
  */
-public class Bolo {
+public abstract class Bolo {
+    private double peso;
+    private double preco;
+    private String tipo;
+    private String ingredientes;
+    private int validade;
+    
+    public Bolo(double peso, double preco, String tipo, String ingredientes, int validade){
+        this.peso=peso;
+        this.preco=preco;
+        this.tipo=tipo;
+        this.ingredientes=ingredientes;
+        this.validade=validade;
+    }
+    
+    //Método template
+    public final void prepararBolo(){
+        misturarIngredientes();
+        baterMassa();
+        assar();
+        empacotar();
+    };
+    
+    public void empacotar(){}
+    public void misturarIngredientes(){};
+    public abstract void assar();
+    public abstract void baterMassa();
+ 
+    /**
+     * @return the peso
+     */
+    public double getPeso() {
+        return peso;
+    }
+
+    /**
+     * @param peso the peso to set
+     */
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
+
+    /**
+     * @return the preco
+     */
+    public double getPreco() {
+        return preco;
+    }
+
+    /**
+     * @param preco the preco to set
+     */
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+
+    /**
+     * @return the tipo
+     */
+    public String getTipo() {
+        return tipo;
+    }
+
+    /**
+     * @param tipo the tipo to set
+     */
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    /**
+     * @return the ingredientes
+     */
+    public String getIngredientes() {
+        return ingredientes;
+    }
+
+    /**
+     * @param ingredientes the ingredientes to set
+     */
+    public void setIngredientes(String ingredientes) {
+        this.ingredientes = ingredientes;
+    }
+
+    /**
+     * @return the validade
+     */
+    public int getValidade() {
+        return validade;
+    }
+
+    /**
+     * @param validade the validade to set
+     */
+    public void setValidade(int validade) {
+        this.validade = validade;
+    }
     
 }

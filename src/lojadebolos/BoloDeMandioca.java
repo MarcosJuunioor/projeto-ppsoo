@@ -9,6 +9,18 @@ package lojadebolos;
  *
  * @author marcosantonio
  */
-public class BoloDeMandioca {
-    
+public class BoloDeMandioca extends Bolo{
+    public BoloDeMandioca(double peso, double preco, String tipo, String ingredientes, int validade){
+        super(peso, preco, tipo, ingredientes, validade);
+    }    
+
+    @Override
+    public void assar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void baterMassa() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

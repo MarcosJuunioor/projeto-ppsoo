@@ -9,8 +9,13 @@ package lojadebolos;
  *
  * @author marcosantonio
  */
-public class LojaDeBolos {
-
-
+public abstract class LojaDeBolos{
+    //Método de fábrica
+    public abstract Bolo criarBolo(String tipo);
     
+    public Bolo pedirBolo(String tipo){
+        Bolo bolo = criarBolo(tipo);
+        bolo.prepararBolo();
+        return bolo;
+    }
 }

@@ -9,6 +9,8 @@ package lojadebolos;
  *
  * @author marcosantonio
  */
+
+//Singleton
 public class Batedeira {
     
 }
