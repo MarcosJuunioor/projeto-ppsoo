@@ -27,16 +27,24 @@ public abstract class Bolo {
     //Método template
     public final void prepararBolo(){
         misturarIngredientes();
-        baterMassa();
+        
+        Batedeira bat = Batedeira.getInstance();
+        bat.encherBatedeira();
+        bat.baterMassa();
+        bat.esvaziarBatedeira();
+        
         assar();
         empacotar();
     };
     
-    public void empacotar(){}
-    public void misturarIngredientes(){};
+    public void empacotar(){
+        System.out.println("Empacotando bolo de "+this.tipo+"... pronto.");
+    }
+    public void misturarIngredientes(){
+        System.out.println("Misturando "+this.ingredientes);
+    };
     public abstract void assar();
-    public abstract void baterMassa();
- 
+    
     /**
      * @return the peso
      */

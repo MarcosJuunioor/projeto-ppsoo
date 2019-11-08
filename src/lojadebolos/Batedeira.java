@@ -12,5 +12,43 @@ package lojadebolos;
 
 //Singleton
 public class Batedeira {
+    private boolean vazia ;
+    private volatile static Batedeira uniqueInstance ;
     
+    private Batedeira(){}
+    
+    public static Batedeira getInstance(){
+        if (uniqueInstance == null) {
+            synchronized (Batedeira.class) {
+                if ( uniqueInstance == null ){
+                uniqueInstance = new Batedeira();
+                uniqueInstance.vazia=true;
+                }
+            }
+        }
+        return uniqueInstance ;
+    }
+    
+    public void encherBatedeira(){
+        if(this.vazia){
+            System.out.println("Enchendo batedeira...");
+            this.vazia=false;
+        }
+    }
+    
+    public void baterMassa(){
+        if(!this.vazia){
+            System.out.println("Batendo massa...");
+        }
+    }
+    
+    public void esvaziarBatedeira(){
+        if(!this.vazia){
+            System.out.println("Esvaziando batedeira...");
+            this.vazia=true;
+        }
+    }
+        
 }
+    
+

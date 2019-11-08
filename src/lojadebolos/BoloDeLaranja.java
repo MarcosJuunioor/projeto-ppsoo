@@ -16,12 +16,7 @@ public class BoloDeLaranja extends Bolo{
 
     @Override
     public void assar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void baterMassa() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Assando bolo de "+this.getTipo()+" a 200ºc... Virando o lado a cada 7 min...");
     }
     
 }
