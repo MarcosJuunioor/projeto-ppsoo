@@ -5,20 +5,20 @@
  */
 package cliente;
 
-import lojadebolos.LojaDeBolos;
-import lojadebolos.LojaDeBolosTradicionais;
+import cursodebolos.CursoDeBolos;
+import cursodebolos.CursoDeBolosTradicionais;
 
 /**
  *
  * @author marcosantonio
  */
-public class TesteLojaDeBolosTradicionais {
+public class TesteCursosDeBolos {
     public static void main(String[] args){
-        LojaDeBolos loja = new LojaDeBolosTradicionais();
-        loja.pedirBolo("trigo");
+        CursoDeBolos curso = new CursoDeBolosTradicionais();
+        curso.mostrarTutorial("trigo", 1);
         System.out.println();
-        loja.pedirBolo("laranja");
+        curso.mostrarTutorial("laranja", 1.5);
         System.out.println();
-        loja.pedirBolo("mandioca");
+        curso.mostrarTutorial("mandioca", 2);
     }
 }

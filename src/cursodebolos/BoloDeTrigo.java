@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package lojadebolos;
+package cursodebolos;
 
 /**
  *
@@ -12,8 +12,8 @@ package lojadebolos;
 public class BoloDeTrigo extends Bolo{ 
 
 
-    public BoloDeTrigo(double peso, double preco, String tipo, String ingredientes, int validade){
-        super(peso, preco, tipo, ingredientes, validade);
+    public BoloDeTrigo(double peso, String tipo, String ingredientes, int validade){
+        super(peso, tipo, ingredientes, validade);
     }    
 
     @Override

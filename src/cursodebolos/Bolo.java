@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package lojadebolos;
+package cursodebolos;
 
 /**
  *
@@ -11,14 +11,12 @@ package lojadebolos;
  */
 public abstract class Bolo {
     private double peso;
-    private double preco;
     private String tipo;
     private String ingredientes;
     private int validade;
     
-    public Bolo(double peso, double preco, String tipo, String ingredientes, int validade){
+    public Bolo(double peso, String tipo, String ingredientes, int validade){
         this.peso=peso;
-        this.preco=preco;
         this.tipo=tipo;
         this.ingredientes=ingredientes;
         this.validade=validade;
@@ -26,13 +24,7 @@ public abstract class Bolo {
     
     //Método template
     public final void prepararBolo(){
-        misturarIngredientes();
-        
-        Batedeira bat = Batedeira.getInstance();
-        bat.encherBatedeira();
-        bat.baterMassa();
-        bat.esvaziarBatedeira();
-        
+        misturarIngredientes();     
         assar();
         empacotar();
     };
@@ -57,20 +49,6 @@ public abstract class Bolo {
      */
     public void setPeso(double peso) {
         this.peso = peso;
-    }
-
-    /**
-     * @return the preco
-     */
-    public double getPreco() {
-        return preco;
-    }
-
-    /**
-     * @param preco the preco to set
-     */
-    public void setPreco(double preco) {
-        this.preco = preco;
     }
 
     /**

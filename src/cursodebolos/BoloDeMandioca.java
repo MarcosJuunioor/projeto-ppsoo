@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package lojadebolos;
+package cursodebolos;
 
 /**
  *
  * @author marcosantonio
  */
 public class BoloDeMandioca extends Bolo{
-    public BoloDeMandioca(double peso, double preco, String tipo, String ingredientes, int validade){
-        super(peso, preco, tipo, ingredientes, validade);
+    public BoloDeMandioca(double peso, String tipo, String ingredientes, int validade){
+        super(peso, tipo, ingredientes, validade);
     }    
 
     @Override
