@@ -5,17 +5,27 @@
  */
 package cursodebolos;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author marcosantonio
  */
 public class BoloDeMandioca extends Bolo{
-    public BoloDeMandioca(double peso, String tipo, String ingredientes, int validade){
+    public BoloDeMandioca(double peso, String tipo, ArrayList<Ingrediente> ingredientes, int validade){
         super(peso, tipo, ingredientes, validade);
     }    
 
     @Override
-    public void assar() {
-        System.out.println("Assando bolo de "+this.getTipo()+" a 220ºc... Virando o lado a cada 5 min...");
+    public void prepararMassa() {
+        System.out.println("Modo de Preparo:");
+        System.out.println("Bata a manteiga com o açúcar e os ovos, misture a mandioca ralada, junte a farinha e o fermento.");
+        System.out.println("Por último, acrescente o coco e o queijo ralado.");  
+        System.out.println("Asse em forma untada em forno preaquecido por 40 minutos.");
+    }
+
+    @Override
+    public void rechear() {
+        //...
     }
 }

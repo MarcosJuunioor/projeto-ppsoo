@@ -15,10 +15,10 @@ import cursodebolos.CursoDeBolosTradicionais;
 public class TesteCursosDeBolos {
     public static void main(String[] args){
         CursoDeBolos curso = new CursoDeBolosTradicionais();
-        curso.mostrarTutorial("trigo", 1);
+        curso.ensinar("trigo", 2);
         System.out.println();
-        curso.mostrarTutorial("laranja", 1.5);
+        curso.ensinar("laranja", 1);
         System.out.println();
-        curso.mostrarTutorial("mandioca", 2);
+        curso.ensinar("mandioca", 0.5);
     }
 }

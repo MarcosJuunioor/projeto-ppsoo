@@ -11,11 +11,13 @@ package cursodebolos;
  */
 public class Ingrediente {
     private String nome;
-    private double peso;
+    private double quantidade;
+    private String unidadeDeMedida;
     
-    public Ingrediente(String nome, double peso){
+    public Ingrediente(String nome, double quantidade, String unidadeDeMedida){
         this.nome=nome;
-        this.peso=peso;
+        this.quantidade=quantidade;
+        this.unidadeDeMedida=unidadeDeMedida;
     }
 
     /**
@@ -35,15 +37,29 @@ public class Ingrediente {
     /**
      * @return the peso
      */
-    public double getPeso() {
-        return peso;
+    public double getQuantidade() {
+        return quantidade;
     }
 
     /**
      * @param peso the peso to set
      */
-    public void setPeso(double peso) {
-        this.peso = peso;
+    public void setQuantidade(double quantidade) {
+        this.quantidade = quantidade;
+    }
+
+    /**
+     * @return the unidadeDeMedida
+     */
+    public String getUnidadeDeMedida() {
+        return unidadeDeMedida;
+    }
+
+    /**
+     * @param unidadeDeMedida the unidadeDeMedida to set
+     */
+    public void setUnidadeDeMedida(String unidadeDeMedida) {
+        this.unidadeDeMedida = unidadeDeMedida;
     }
     
     

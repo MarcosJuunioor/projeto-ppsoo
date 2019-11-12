@@ -5,6 +5,8 @@
  */
 package cursodebolos;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author marcosantonio
@@ -12,13 +14,26 @@ package cursodebolos;
 public class BoloDeTrigo extends Bolo{ 
 
 
-    public BoloDeTrigo(double peso, String tipo, String ingredientes, int validade){
+    public BoloDeTrigo(double peso, String tipo, ArrayList<Ingrediente> ingredientes, int validade){
         super(peso, tipo, ingredientes, validade);
     }    
 
     @Override
-    public void assar() {
-        System.out.println("Assando bolo de "+this.getTipo()+" a 200ºc... Virando o lado a cada 10 min...");
+    public void prepararMassa() {
+        System.out.println("Modo de Preparo:");
+        System.out.println("Junte a manteiga, o açúcar e os ovos em uma tigela.");
+        System.out.println("Em seguida misture tudo co ajuda de um batedor de arame (fouet).");  
+        System.out.println("Adicione o leite e misture mais um pouco.");
+        System.out.println("Depois adicione toda a farinha de trigo e continue misturando até formar uma massa bem homogênea.");
+        System.out.println("System.out.println(\"Depois adicione toda a farinha de trigo e continue misturando até formar uma massa bem homogênea.");
+        System.out.println("Despeje a mistura numa forma untada e enfarinhada.");
+        System.out.println("Leve ao forno preaquecido, 180º, por cerca 40 minutos ou até dourar.");
+        System.out.println("Para finalizar eu gosto de salpicar açúcar de confeiteiro por cima. ");
+    }
+
+    @Override
+    public void rechear() {
+        //...
     }
 
 }
