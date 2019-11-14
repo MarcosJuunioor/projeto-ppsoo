@@ -42,7 +42,7 @@ public class Ingrediente {
     }
 
     /**
-     * @param peso the peso to set
+     * @param quantidade
      */
     public void setQuantidade(double quantidade) {
         this.quantidade = quantidade;

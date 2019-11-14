@@ -12,37 +12,42 @@ import java.util.ArrayList;
  * @author marcosantonio
  */
 public abstract class Bolo {
+
     private double peso;
     private String tipo;
     private ArrayList<Ingrediente> ingredientes;
     private int validade;
-    private boolean recheio = false;
-    
-    public Bolo(double peso, String tipo, ArrayList<Ingrediente> ingredientes, int validade){
-        this.peso=peso;
-        this.tipo=tipo;
-        this.ingredientes=ingredientes;
-        this.validade=validade;
+//    private boolean recheio = false;
+
+    public void infoBolo(double peso, String tipo, ArrayList<Ingrediente> ingredientes, int validade) {
+        this.peso = peso;
+        this.tipo = tipo;
+        this.ingredientes = ingredientes;
+        this.validade = validade;
     }
-    
+
     //Método template
-    public final void preparar(){
-        reunirIngredientes();     
-        prepararMassa();  
-        if(this.recheio){
-            rechear();
-        }
-    };
-    
-    public void reunirIngredientes(){
+    public final void preparar() {
+        reunirIngredientes();
+        prepararMassa();
+//        if (this.recheio) {
+        rechear();
+//        }
+    }
+
+    public void reunirIngredientes() {
         System.out.println("Ingredientes: ");
-        for(Ingrediente ingrediente: this.ingredientes){
-            System.out.println(ingrediente.getQuantidade()+" "+ingrediente.getUnidadeDeMedida()+" "+ingrediente.getNome());
+        for (Ingrediente ingrediente : this.ingredientes) {
+            System.out.println(ingrediente.getQuantidade() + " " + ingrediente.getUnidadeDeMedida() + " " + ingrediente.getNome());
         }
-    };
+    }
+
+    ;
     
     public abstract void prepararMassa();
+
     public abstract void rechear();
+
     /**
      * @return the peso
      */
@@ -98,5 +103,5 @@ public abstract class Bolo {
     public void setValidade(int validade) {
         this.validade = validade;
     }
-    
+
 }
