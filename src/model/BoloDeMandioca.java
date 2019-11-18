@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cursodebolos;
+package model;
 
+import model.Ingrediente;
+import model.Bolo;
 import java.util.ArrayList;
 
 /**
@@ -25,7 +27,5 @@ public class BoloDeMandioca extends Bolo{
     }
 
     @Override
-    public void rechear() {
-        //...
-    }
+    public void rechear() {}
 }

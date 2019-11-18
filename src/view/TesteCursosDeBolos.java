@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cliente;
+package view;
 
-import cursodebolos.CursoDeBolos;
-import cursodebolos.CursoDeBolosTradicionais;
-import cursodebolos.TipoDeBolo;
+import model.CursoDeBolos;
+import model.CursoDeBolosTradicionais;
+import model.TipoDeBolo;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

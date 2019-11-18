@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cursodebolos;
+package model;
 
+import model.Ingrediente;
 import java.util.ArrayList;
 
 /**
@@ -17,7 +18,7 @@ public abstract class Bolo {
     private String tipo;
     private ArrayList<Ingrediente> ingredientes;
     private int validade;
-//    private boolean recheio = false;
+    private boolean recheio = true;
 
     public void infoBolo(double peso, String tipo, ArrayList<Ingrediente> ingredientes, int validade) {
         this.peso = peso;
@@ -30,9 +31,9 @@ public abstract class Bolo {
     public final void preparar() {
         reunirIngredientes();
         prepararMassa();
-//        if (this.recheio) {
-        rechear();
-//        }
+        if (this.recheio) {
+            rechear();
+       }
     }
 
     public void reunirIngredientes() {

@@ -3,18 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cursodebolos;
+package model;
 
 /**
  *
  * @author Wey
  */
-public abstract class RecheioDecorator extends Bolo {
+public class TipoDeBolo {
 
-    @Override
-    public abstract void prepararMassa();
+    public static final String TRIGO = "trigo";
+    public static final String LARANJA = "laranja";
+    public static final String MANDIOCA = "mandioca";
 
-    @Override
-    public abstract void rechear();
 
 }

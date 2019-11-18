@@ -3,8 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cursodebolos;
+package model;
 
+import model.Ingrediente;
+import model.TipoDeBolo;
+import model.CursoDeBolos;
+import model.BoloDeTrigo;
+import model.BoloDeMandioca;
+import model.BoloDeLaranja;
+import model.Bolo;
 import java.util.ArrayList;
 
 /**
@@ -31,7 +38,7 @@ public class CursoDeBolosTradicionais extends CursoDeBolos {
 
             case TipoDeBolo.LARANJA: {
                 ArrayList<Ingrediente> ingredientesBoloDeLaranja = new ArrayList<>();
-                ingredientesBoloDeLaranja.add(new Ingrediente("ovos", 4 * pesoBolo, "unidade(s)"));
+                ingredientesBoloDeLaranja.add(new Ingrediente("ovo(s)", 4 * pesoBolo, "unidade(s)"));
                 ingredientesBoloDeLaranja.add(new Ingrediente("açúcar", 2 * pesoBolo, "xícara(s)"));
                 ingredientesBoloDeLaranja.add(new Ingrediente("óleo", 1 * pesoBolo, "xícara(s)"));
                 ingredientesBoloDeLaranja.add(new Ingrediente("laranja(suco)", 2 * pesoBolo, "unidade(s)"));
