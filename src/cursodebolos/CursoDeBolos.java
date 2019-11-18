@@ -9,13 +9,15 @@ package cursodebolos;
  *
  * @author marcosantonio
  */
-public abstract class CursoDeBolos{
+public abstract class CursoDeBolos {
+
     //Método de fábrica
     public abstract Bolo criarBolo(String tipo, double peso);
-    
-    public void ensinar(String tipo, double peso){
-        System.out.println("Bolo de "+tipo);
+
+    public void ensinar(String tipo, double peso) {
+        System.out.println("Bolo de " + tipo);
         Bolo bolo = criarBolo(tipo, peso);
-        bolo.preparar();
+        Bolo bolo2 = new RecheioDeChocolate(bolo); //recheio de chocolate agora engloba o objeto do bolo de limão, adicionando mais recheio
+        bolo2.preparar();
     }
 }
