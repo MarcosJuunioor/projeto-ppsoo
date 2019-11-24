@@ -18,41 +18,42 @@ public class RecheioDeChocolate extends RecheioDecorator {
 
     Bolo bolo;
 
-    ArrayList<Ingrediente> ingredientes = new ArrayList<>();
-    ArrayList<String> preparo = new ArrayList<>();
+    ArrayList<Ingrediente> ingredientesRecheio = new ArrayList<>();
+    ArrayList<String> preparoRecheio = new ArrayList<>();
 
     public RecheioDeChocolate(Bolo bolo) {
         this.bolo = bolo;
-        infoBolo(bolo.getPeso(), bolo.getTipo(), bolo.getIngredientes(), bolo.getValidade());
+        infoBolo(bolo.getPeso(), bolo.getTipo(), bolo.getIngredientes(), bolo.getValidade(), bolo.isRecheio(), bolo.getReceita());
 
-        ingredientes.add(new Ingrediente("Amido de milho", 4, "colher(es) (sopa)"));
-        ingredientes.add(new Ingrediente("Chocolate em pó", 6, "colher(es) (sopa)"));
-        ingredientes.add(new Ingrediente("Gema", 1, "unidade(s)"));
-        ingredientes.add(new Ingrediente("Lata de leite condensado", 1, "unidade(s)"));
-        ingredientes.add(new Ingrediente("Lata de creme leite", 1, "unidade(s)"));
+        ingredientesRecheio.add(new Ingrediente("Amido de milho", 4, "colher(es) (sopa)"));
+        ingredientesRecheio.add(new Ingrediente("Chocolate em pó", 6, "colher(es) (sopa)"));
+        ingredientesRecheio.add(new Ingrediente("Gema", 1, "unidade(s)"));
+        ingredientesRecheio.add(new Ingrediente("Lata de leite condensado", 1, "unidade(s)"));
+        ingredientesRecheio.add(new Ingrediente("Lata de creme leite", 1, "unidade(s)"));
 
-        preparo.add("Em uma panela coloque todos os ingredientes menos o creme de leite. Leve para o fogo médio, mexa até engrossar");
-        preparo.add("Retire do fogo, deixe esfriar");
-        preparo.add("Depois de frio coloque o creme em uma batedeira, junte o creme de leite, bata até ficar homogêneo");
+        preparoRecheio.add("Em uma panela coloque todos os ingredientes menos o creme de leite. Leve para o fogo médio, mexa até engrossar");
+        preparoRecheio.add("Retire do fogo, deixe esfriar");
+        preparoRecheio.add("Depois de frio coloque o creme em uma batedeira, junte o creme de leite, bata até ficar homogêneo");
     }
 
     @Override
     public void prepararMassa() {
-        bolo.prepararMassa();
+        this.bolo.prepararMassa();
     }
 
     @Override
     public void rechear() {
-        bolo.rechear();
-        System.out.println("Ingredientes:");
-        ingredientes.forEach((ingrediente) -> {
-            System.out.println(ingrediente.getQuantidade() + " " + ingrediente.getUnidadeDeMedida() + " " + ingrediente.getNome());
+        ArrayList<String> receita = this.getReceita();
+        receita.add("Recheio:");
+        receita.add("Ingredientes:");
+        ingredientesRecheio.forEach((ingrediente) -> {
+            receita.add(ingrediente.getQuantidade() + " " + ingrediente.getUnidadeDeMedida() + " " + ingrediente.getNome());
         });
 
-        System.out.println();
-        System.out.println("Modo de Preparo:");
-        preparo.forEach((preparo) -> {
-            System.out.println(preparo);
+        
+        receita.add("Modo de Preparo:");
+        preparoRecheio.forEach((preparo) -> {
+            receita.add(preparo);
         });
 
     }

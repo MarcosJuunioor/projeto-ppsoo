@@ -15,16 +15,17 @@ import java.util.ArrayList;
  */
 public class BoloDeLaranja extends Bolo {
 
-    public BoloDeLaranja(double peso, String tipo, ArrayList<Ingrediente> ingredientes, int validade) {
-        infoBolo(peso, tipo, ingredientes, validade);
+    public BoloDeLaranja(double peso, String tipo, ArrayList<Ingrediente> ingredientes, int validade, boolean recheio) {
+        infoBolo(peso, tipo, ingredientes, validade, recheio, this.getReceita());
     }
 
     @Override
     public void prepararMassa() {
-        System.out.println("Modo de Preparo:");
-        System.out.println("Bata no liquidificador os ovos, o açúcar, o óleo, o suco e a casca da laranja.");
-        System.out.println("Passe para uma tigela e acrescente a farinha de trigo e o fermento. Bata a massa até ficar uniforme.");
-        System.out.println("Leve para assar em uma forma com furo central, untada e enfarinhada, por mais ou menos 30 minutos. \n");
+        ArrayList<String> receita = this.getReceita();
+        receita.add("Modo de Preparo:");
+        receita.add("Bata no liquidificador os ovos, o açúcar, o óleo, o suco e a casca da laranja.");
+        receita.add("Passe para uma tigela e acrescente a farinha de trigo e o fermento. Bata a massa até ficar uniforme.");
+        receita.add("Leve para assar em uma forma com furo central, untada e enfarinhada, por mais ou menos 30 minutos. \n");
     }
 
     @Override

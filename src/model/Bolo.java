@@ -18,28 +18,32 @@ public abstract class Bolo {
     private String tipo;
     private ArrayList<Ingrediente> ingredientes;
     private int validade;
-    private boolean recheio = true;
-
-    public void infoBolo(double peso, String tipo, ArrayList<Ingrediente> ingredientes, int validade) {
+    private boolean recheio = false;
+    private ArrayList<String> receita = new ArrayList<String>();
+    
+    public void infoBolo(double peso, String tipo, ArrayList<Ingrediente> ingredientes, int validade, boolean recheio, ArrayList<String> receita) {
         this.peso = peso;
         this.tipo = tipo;
         this.ingredientes = ingredientes;
         this.validade = validade;
+        this.setRecheio(recheio);
+        this.receita=receita;
     }
 
     //Método template
-    public final void preparar() {
+    public final ArrayList<String> preparar() {
         reunirIngredientes();
         prepararMassa();
-        if (this.recheio) {
+        if (this.isRecheio()) {
             rechear();
        }
+       return this.receita;
     }
 
     public void reunirIngredientes() {
-        System.out.println("Ingredientes: ");
+        this.receita.add("Ingredientes:");
         for (Ingrediente ingrediente : this.ingredientes) {
-            System.out.println(ingrediente.getQuantidade() + " " + ingrediente.getUnidadeDeMedida() + " " + ingrediente.getNome());
+            this.receita.add(ingrediente.getQuantidade() + " " + ingrediente.getUnidadeDeMedida() + " " + ingrediente.getNome());
         }
     }
 
@@ -103,6 +107,34 @@ public abstract class Bolo {
      */
     public void setValidade(int validade) {
         this.validade = validade;
+    }
+
+    /**
+     * @return the recheio
+     */
+    public boolean isRecheio() {
+        return recheio;
+    }
+
+    /**
+     * @param recheio the recheio to set
+     */
+    public void setRecheio(boolean recheio) {
+        this.recheio = recheio;
+    }
+
+    /**
+     * @return the receita
+     */
+    public ArrayList<String> getReceita() {
+        return receita;
+    }
+
+    /**
+     * @param receita the receita to set
+     */
+    public void setReceita(ArrayList<String> receita) {
+        this.receita = receita;
     }
 
 }

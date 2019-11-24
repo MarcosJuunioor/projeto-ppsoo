@@ -19,7 +19,7 @@ public class RecheioDeLimao extends RecheioDecorator {
     
     public RecheioDeLimao(Bolo bolo) {
         this.bolo = bolo;
-        infoBolo(bolo.getPeso(), bolo.getTipo(), bolo.getIngredientes(), bolo.getValidade());
+        infoBolo(bolo.getPeso(), bolo.getTipo(), bolo.getIngredientes(), bolo.getValidade(), bolo.isRecheio(), bolo.getReceita());
     }
 
     @Override
@@ -30,7 +30,7 @@ public class RecheioDeLimao extends RecheioDecorator {
     @Override
     public void rechear() {
         bolo.rechear();
-        System.out.println("Limao :< ");
+        //implementação...
     }
 
 }

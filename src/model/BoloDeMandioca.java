@@ -14,16 +14,17 @@ import java.util.ArrayList;
  * @author marcosantonio
  */
 public class BoloDeMandioca extends Bolo{
-    public BoloDeMandioca(double peso, String tipo, ArrayList<Ingrediente> ingredientes, int validade){
-        infoBolo(peso, tipo, ingredientes, validade);
+    public BoloDeMandioca(double peso, String tipo, ArrayList<Ingrediente> ingredientes, int validade, boolean recheio){
+        infoBolo(peso, tipo, ingredientes, validade, recheio, this.getReceita());
     }    
 
     @Override
     public void prepararMassa() {
-        System.out.println("Modo de Preparo:");
-        System.out.println("Bata a manteiga com o açúcar e os ovos, misture a mandioca ralada, junte a farinha e o fermento.");
-        System.out.println("Por último, acrescente o coco e o queijo ralado.");  
-        System.out.println("Asse em forma untada em forno preaquecido por 40 minutos. \n");
+        ArrayList<String> receita = this.getReceita();
+        receita.add("Modo de Preparo:");
+        receita.add("Bata a manteiga com o açúcar e os ovos, misture a mandioca ralada, junte a farinha e o fermento.");
+        receita.add("Por último, acrescente o coco e o queijo ralado.");  
+        receita.add("Asse em forma untada em forno preaquecido por 40 minutos. \n");
     }
 
     @Override

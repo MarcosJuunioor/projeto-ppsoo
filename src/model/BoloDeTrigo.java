@@ -15,20 +15,21 @@ import java.util.ArrayList;
  */
 public class BoloDeTrigo extends Bolo {
 
-    public BoloDeTrigo(double peso, String tipo, ArrayList<Ingrediente> ingredientes, int validade) {
-        infoBolo(peso, tipo, ingredientes, validade);
+    public BoloDeTrigo(double peso, String tipo, ArrayList<Ingrediente> ingredientes, int validade,boolean recheio) {
+        infoBolo(peso, tipo, ingredientes, validade, recheio, this.getReceita());
     }
 
     @Override
     public void prepararMassa() {
-        System.out.println("Modo de Preparo:");
-        System.out.println("Junte a manteiga, o açúcar e os ovos em uma tigela.");
-        System.out.println("Em seguida misture tudo co ajuda de um batedor de arame (fouet).");
-        System.out.println("Adicione o leite e misture mais um pouco.");
-        System.out.println("Depois adicione toda a farinha de trigo e continue misturando até formar uma massa bem homogênea.");
-        System.out.println("Despeje a mistura numa forma untada e enfarinhada.");
-        System.out.println("Leve ao forno preaquecido, 180º, por cerca 40 minutos ou até dourar.");
-        System.out.println("Para finalizar eu gosto de salpicar açúcar de confeiteiro por cima. \n");
+        ArrayList<String> receita = this.getReceita();
+        receita.add("Modo de Preparo:");
+        receita.add("Junte a manteiga, o açúcar e os ovos em uma tigela.");
+        receita.add("Em seguida misture tudo co ajuda de um batedor de arame (fouet).");
+        receita.add("Adicione o leite e misture mais um pouco.");
+        receita.add("Depois adicione toda a farinha de trigo e continue misturando até formar uma massa bem homogênea.");
+        receita.add("Despeje a mistura numa forma untada e enfarinhada.");
+        receita.add("Leve ao forno preaquecido, 180º, por cerca 40 minutos ou até dourar.");
+        receita.add("Para finalizar eu gosto de salpicar açúcar de confeiteiro por cima. \n");
     }
 
     @Override

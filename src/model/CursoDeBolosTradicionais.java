@@ -21,7 +21,7 @@ import java.util.ArrayList;
 public class CursoDeBolosTradicionais extends CursoDeBolos {
 
     @Override
-    public Bolo criarBolo(String tipo, double pesoBolo) {
+    public Bolo criarBolo(String tipo, double pesoBolo, boolean recheio) {
 
         switch (tipo) {
             case TipoDeBolo.TRIGO: {
@@ -33,7 +33,7 @@ public class CursoDeBolosTradicionais extends CursoDeBolos {
                 ingredientesBoloDeTrigo.add(new Ingrediente("manteiga", 4 * pesoBolo, "colher(es) (sopa)"));
                 ingredientesBoloDeTrigo.add(new Ingrediente("fermento biológico em pó", 1 * pesoBolo, "colher(es) (sopa)"));
 
-                return new BoloDeTrigo(pesoBolo, "trigo", ingredientesBoloDeTrigo, 15);
+                return new BoloDeTrigo(pesoBolo, "trigo", ingredientesBoloDeTrigo, 15, recheio);
             }
 
             case TipoDeBolo.LARANJA: {
@@ -46,7 +46,7 @@ public class CursoDeBolosTradicionais extends CursoDeBolos {
                 ingredientesBoloDeLaranja.add(new Ingrediente("farinha de trigo", 2 * pesoBolo, "xícara(s)"));
                 ingredientesBoloDeLaranja.add(new Ingrediente("fermento", 1 * pesoBolo, "colher(es)"));
 
-                return new BoloDeLaranja(pesoBolo, "laranja", ingredientesBoloDeLaranja, 10);
+                return new BoloDeLaranja(pesoBolo, "laranja", ingredientesBoloDeLaranja, 10, recheio);
             }
 
             case TipoDeBolo.MANDIOCA: {
@@ -60,7 +60,7 @@ public class CursoDeBolosTradicionais extends CursoDeBolos {
                 ingredientesBoloDeMandioca.add(new Ingrediente("queijo ralado", 50 * pesoBolo, "gramas"));
                 ingredientesBoloDeMandioca.add(new Ingrediente("fermento em pó", 1 * pesoBolo, "colher(es) (sopa)"));
 
-                return new BoloDeMandioca(pesoBolo, "mandioca", ingredientesBoloDeMandioca, 10);
+                return new BoloDeMandioca(pesoBolo, "mandioca", ingredientesBoloDeMandioca, 10, recheio);
             }
 
             default:
