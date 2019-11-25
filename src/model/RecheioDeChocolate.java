@@ -25,11 +25,11 @@ public class RecheioDeChocolate extends RecheioDecorator {
         this.bolo = bolo;
         infoBolo(bolo.getPeso(), bolo.getTipo(), bolo.getIngredientes(), bolo.getValidade(), bolo.isRecheio(), bolo.getReceita());
 
-        ingredientesRecheio.add(new Ingrediente("Amido de milho", 4, "colher(es) (sopa)"));
-        ingredientesRecheio.add(new Ingrediente("Chocolate em pó", 6, "colher(es) (sopa)"));
-        ingredientesRecheio.add(new Ingrediente("Gema", 1, "unidade(s)"));
-        ingredientesRecheio.add(new Ingrediente("Lata de leite condensado", 1, "unidade(s)"));
-        ingredientesRecheio.add(new Ingrediente("Lata de creme leite", 1, "unidade(s)"));
+        ingredientesRecheio.add(new Ingrediente("Amido de milho", 4*this.getPeso(), "colher(es) (sopa)"));
+        ingredientesRecheio.add(new Ingrediente("Chocolate em pó", 6*this.getPeso(), "colher(es) (sopa)"));
+        ingredientesRecheio.add(new Ingrediente("Gema", 1*this.getPeso(), "unidade(s)"));
+        ingredientesRecheio.add(new Ingrediente("Lata de leite condensado", 1*this.getPeso(), "unidade(s)"));
+        ingredientesRecheio.add(new Ingrediente("Lata de creme leite", 1*this.getPeso(), "unidade(s)"));
 
         preparoRecheio.add("Em uma panela coloque todos os ingredientes menos o creme de leite. Leve para o fogo médio, mexa até engrossar");
         preparoRecheio.add("Retire do fogo, deixe esfriar");

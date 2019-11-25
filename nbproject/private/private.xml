@@ -3,11 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/marco/OneDrive/Documentos/NetBeansProjects/projeto-ppsoo/src/model/CursoDeBolos.java</file>
             <file>file:/C:/Users/marco/OneDrive/Documentos/NetBeansProjects/projeto-ppsoo/src/view/ViewInicial.java</file>
             <file>file:/C:/Users/marco/OneDrive/Documentos/NetBeansProjects/projeto-ppsoo/src/control/ControlCursoDeBolos.java</file>
             <file>file:/C:/Users/marco/OneDrive/Documentos/NetBeansProjects/projeto-ppsoo/src/model/Bolo.java</file>
             <file>file:/C:/Users/marco/OneDrive/Documentos/NetBeansProjects/projeto-ppsoo/src/model/RecheioDeLimao.java</file>
+=======
+            <file>file:/home/wey/NetBeansProjects/projeto-ppsoo-master/src/model/CursoDeBolosTradicionais.java</file>
+            <file>file:/home/wey/NetBeansProjects/projeto-ppsoo-master/src/model/BoloDeMandioca.java</file>
+            <file>file:/home/wey/NetBeansProjects/projeto-ppsoo-master/src/model/RecheioDeLimao.java</file>
+            <file>file:/home/wey/NetBeansProjects/projeto-ppsoo-master/src/control/ControlCursoDeBolos.java</file>
+>>>>>>> af45e6f6a049af63f601fcbf004b6aefbb80ccef
         </group>
     </open-files>
 </project-private>
