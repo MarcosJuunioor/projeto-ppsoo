@@ -3,14 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/marcosantonio/Documents/NetBeansProjects/projeto-ppsoo/src/cursodebolos/CursoDeBolosTradicionais.java</file>
-            <file>file:/C:/Users/marcosantonio/Documents/NetBeansProjects/projeto-ppsoo/src/cursodebolos/CursoDeBolos.java</file>
-            <file>file:/C:/Users/marcosantonio/Documents/NetBeansProjects/projeto-ppsoo/src/cliente/TesteCursosDeBolos.java</file>
-            <file>file:/C:/Users/marcosantonio/Documents/NetBeansProjects/projeto-ppsoo/src/cursodebolos/Bolo.java</file>
-            <file>file:/C:/Users/marcosantonio/Documents/NetBeansProjects/projeto-ppsoo/src/cursodebolos/BoloDeTrigo.java</file>
-            <file>file:/C:/Users/marcosantonio/Documents/NetBeansProjects/projeto-ppsoo/src/cursodebolos/BoloDeLaranja.java</file>
-            <file>file:/C:/Users/marcosantonio/Documents/NetBeansProjects/projeto-ppsoo/src/cursodebolos/BoloDeMandioca.java</file>
-            <file>file:/C:/Users/marcosantonio/Documents/NetBeansProjects/projeto-ppsoo/src/cursodebolos/Ingrediente.java</file>
+            <file>file:/home/wey/NetBeansProjects/projeto-ppsoo-master/src/model/CursoDeBolosTradicionais.java</file>
+            <file>file:/home/wey/NetBeansProjects/projeto-ppsoo-master/src/model/BoloDeMandioca.java</file>
+            <file>file:/home/wey/NetBeansProjects/projeto-ppsoo-master/src/model/RecheioDeLimao.java</file>
+            <file>file:/home/wey/NetBeansProjects/projeto-ppsoo-master/src/control/ControlCursoDeBolos.java</file>
         </group>
     </open-files>
 </project-private>

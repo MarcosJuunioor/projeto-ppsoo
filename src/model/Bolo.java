@@ -14,6 +14,7 @@ import java.util.ArrayList;
  */
 public abstract class Bolo {
 
+
     private double peso;
     private String tipo;
     private ArrayList<Ingrediente> ingredientes;
